@@ -28,4 +28,5 @@ rm -rf ./node_modules/fabric-client
 cp -rf ../fabric-client ./node_modules
 
 ./scripts/set-up-client.sh
+cp .env.example .env
 npm start
