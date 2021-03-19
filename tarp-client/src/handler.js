@@ -563,7 +563,6 @@ class Handler {
     return this.createIdentityRecord(enrollmentID, userData.id)
       .then(data => {
         result = data;
-
         return fabricCAClient.register(
           {
             enrollmentID: enrollmentID,
