@@ -1,6 +1,7 @@
 require("dotenv").config();
 var request = require("request");
 const fs = require("fs");
+const path = require('path');
 
 let registerUser = () => {
   var options = {
@@ -14,11 +15,11 @@ let registerUser = () => {
     formData: {
       card: {
         value: fs.createReadStream(
-          "/home/priyansh/HyperledgerFabric/SkcriptProjects/tarp/tarp-client/src/cards/Central Bank-AdminUser.card"
+          path.join(__dirname, '..', 'cards', 'Central Bank-AdminUser.card')
         ),
         options: {
           filename:
-            "/home/priyansh/HyperledgerFabric/SkcriptProjects/tarp/tarp-client/src/cards/Central Bank-AdminUser.card",
+          path.join(__dirname, '..', 'cards', 'Central Bank-AdminUser.card'),
           contentType: null
         }
       }
